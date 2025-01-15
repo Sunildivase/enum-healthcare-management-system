@@ -1,7 +1,9 @@
 package com.healthcaremanagementsystem;
 
 import com.healthcaremanagementsystem.model.Person;
+import com.healthcaremanagementsystem.service.DepartmentService;
 import com.healthcaremanagementsystem.service.DoctorService;
+import com.healthcaremanagementsystem.service.HospitalService;
 import com.healthcaremanagementsystem.service.PersonService;
 
 import java.util.HashMap;
@@ -46,10 +48,16 @@ public class EnumHealthcareDemo {
                     break;
 
                 case 3:
+                    HospitalService hospitalService = new HospitalService();
+                    hospitalService.createHospital();
+                    hospitalService.displayHospital();
                     System.out.println("hospital created successfully");
                     break;
 
                 case 4:
+                    DepartmentService departmentService = new DepartmentService();
+                    departmentService.createDepartment();
+                    departmentService.displayDepartment();
                     System.out.println("department created successfully");
                     break;
 
