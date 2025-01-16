@@ -66,11 +66,17 @@ public class EnumHealthcareDemo {
                     break;
 
                 case 6:
+                    PrescriptionService prescriptionService = new PrescriptionService();
+                    prescriptionService.createPrescription();
+                    prescriptionService.displayPrescription();
                     System.out.println("prescription created successfully");
                     break;
 
                 case 7:
-                    System.out.println("billing create successfully");
+                    BillingService billingService = new BillingService();
+                    billingService.createBilling();
+                    billingService.displayBilling();
+                    System.out.println("bill generated successfully");
                     break;
 
                 default:
