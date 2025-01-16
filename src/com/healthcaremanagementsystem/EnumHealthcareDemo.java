@@ -1,10 +1,7 @@
 package com.healthcaremanagementsystem;
 
 import com.healthcaremanagementsystem.model.Person;
-import com.healthcaremanagementsystem.service.DepartmentService;
-import com.healthcaremanagementsystem.service.DoctorService;
-import com.healthcaremanagementsystem.service.HospitalService;
-import com.healthcaremanagementsystem.service.PersonService;
+import com.healthcaremanagementsystem.service.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -62,6 +59,9 @@ public class EnumHealthcareDemo {
                     break;
 
                 case 5:
+                    AppointmentService appointmentService = new AppointmentService();
+                    appointmentService.createAppointment();
+                    appointmentService.displayAppointment();
                     System.out.println("appointment created successfully");
                     break;
 
